@@ -18,6 +18,7 @@ export interface PageInfo extends SanityBody{
     backgroundInfo:string;
     email:string;
     myImage:Image;
+    myImage2:Image;
     name:string;
     phoneNo:string;
     profilePic:Image;

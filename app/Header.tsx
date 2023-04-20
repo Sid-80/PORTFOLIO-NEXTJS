@@ -14,39 +14,19 @@ type Props = {
 function Header({socialLinks}:Props){
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
-
   useEffect(() => {
     setMounted(true);
+    setTheme("dark");
   }, []);
-
   if (!mounted) {
     return null;
   }
-
   const currentTheme = theme === "system" ? systemTheme : theme;
   
   return (
-    <div className="sticky top-0 z-20 flex p-5 shadow-lg justify-between bg-[#ECF2FF] text-[#393053] dark:text-[#ECF2FF]  dark:bg-[rgb(36,36,36)]  ">
+    <div className="sticky scrollbar-hide top-0 z-20 flex p-2 sm:p-5 shadow-lg justify-between bg-transparent  text-[rgb(36,36,36)] dark:text-[#ECF2FF]     ">
       <motion.div
-       className="flex"
-       initial={{
-        x:-500,
-        opacity:0,
-        scale:0.5
-       }}
-       animate={{
-        x:0,
-        opacity:1,
-        scale:1
-       }}
-       transition={{
-        duration:1.1
-       }}
-       >
-        <Link href={"/"}>SID</Link>
-      </motion.div>
-      <motion.div
-       className="hidden sm:flex space-x-4"
+       className="hidden sm:flex space-x-2"
        initial={{
         x:-500,
         opacity:0,
@@ -61,9 +41,11 @@ function Header({socialLinks}:Props){
         duration:1.3
        }}
        >
-        <a href="#tech">Tech</a>
-        <a href="#info">Info</a>
-        <a href="#contact">Contact</a>
+        <a className="rounded-lg text-sm p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#hero">HOME</a>
+        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#about">ABOUT</a>
+        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#project">PROJECTS</a>
+        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#skill">SKILLS</a>
+        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#contact">CONTACT</a>
       </motion.div>
       <motion.div
        className="flex space-x-5"
@@ -81,7 +63,7 @@ function Header({socialLinks}:Props){
         duration:1.5
        }}
        >
-        <div className="md:px-5">
+        <div className="p-2 rounded-full bg-black">
           <div>
             {currentTheme === "dark" ? (
               <SunIcon
@@ -90,15 +72,15 @@ function Header({socialLinks}:Props){
               />
             ) : (
               <MoonIcon
-                className="h-6 w-6 cursor-pointer text-slate-900"
-                onClick={() => {setTheme("dark");console.log("toggling")}}
+                className="h-6 w-6 cursor-pointer  text-slate-300"
+                onClick={() => {setTheme("dark")}}
               />
             )}
           </div>
         </div>
         {
           socialLinks.map((link)=>(
-            <SocialIcon bgColor="black" fgColor="white" style={{height:30,width:30}} url={link.url}/>
+            <SocialIcon bgColor="black" fgColor="white" style={{height:40,width:40}} url={link.url}/>
           ))
         }
         

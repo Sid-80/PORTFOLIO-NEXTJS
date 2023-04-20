@@ -14,12 +14,12 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const socialLinks= await fetchSocials();
+  
   return (
     <html lang="en">
-      <body className='overflow-x-hidden bg-violet-50 text-zinc-800 dark:bg-zinc-900 dark:text-white overflow-y-scroll scrollbar-hide'>
+      <body className='overflow-x-hidden bg-violet-50  dark:bg-zinc-900 overflow-y-scroll scrollbar-hide'>
           <Providers>
-            <Header socialLinks={socialLinks} />
+            
           <div>{children}</div>
           </Providers>
       </body>

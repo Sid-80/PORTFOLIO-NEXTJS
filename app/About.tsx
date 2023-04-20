@@ -1,6 +1,9 @@
+"use client"
 import { urlFor } from '@/sanity';
 import { PageInfo } from '@/typing';
 import React from 'react'
+import { motion } from 'framer-motion';
+import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 
 type Props = {
     pageInfo : PageInfo;
@@ -8,12 +11,39 @@ type Props = {
 
 function About({pageInfo}:Props) {
   return (
-    <div className='relative h-screen flex flex-col md:flex-row md:rounded-lg mx-auto px-10 max-w-7xl items-center justify-evenly snap-y snap-mandatory overflow-hidden'>
-        <h1 className='absolute top-20 font-extrabold uppercase tracking-[20px] text-gray-400 animate-pulse text-2xl'>ABOUT</h1>
-        <img src={urlFor(pageInfo.profilePic).url()} className='md:mb-0 mt-5 md:h-95 md:w-64 h-56 w-56 xl:w-[500px] xl:h-[600px] object-cover flex-shrink-0 rounded-full ' />
-        <div className='space-y-10 px-0 md:px-10'>
-            <h3 className='text-base'>{pageInfo.backgroundInfo}</h3>
+    <div
+      
+     className='relative h-screen flex flex-col items-center justify-center snap-y snap-mandatory overflow-hidden'>
+        <div>
+          <motion.h1 
+          initial={{ y:-100 }}
+          whileInView={{y:0}}
+          transition={{
+              duration:2
+          }}
+          className='font-extrabold p-4 uppercase tracking-[20px] text-gray-400 animate-pulse text-2xl'>ABOUT</motion.h1>
         </div>
+        <div
+         className='flex sm:p-5 p-2 sm:m-10 flex-col md:flex-row items-center justify-center '>
+          <div className='p-2'>
+            <motion.img
+              initial={{ x:-100 }}
+              whileInView={{x:0}}
+              transition={{
+                  duration:2
+              }}
+             src={urlFor(pageInfo.profilePic).url()} className='md:h-95 md:w-64 h-56 w-56 xl:w-[400px] xl:h-[500px] object-cover rounded-full ' /></div>
+          <div className=' w-[350px] p-5 md:w-[400px] lg:w-[600px] md:px-5'>
+              <motion.h3
+                initial={{ x:100 }}
+                whileInView={{x:0}}
+                transition={{
+                    duration:2
+                }}
+               className='sm:text-2xl font-semibold text-center text-base'>{pageInfo.backgroundInfo}</motion.h3>
+          </div>
+        </div>
+        <div><ArrowDownCircleIcon className='absolute text-yellow-500 bottom-10 h-10 animate-bounce w-10' /></div>
     </div>
   )
 }

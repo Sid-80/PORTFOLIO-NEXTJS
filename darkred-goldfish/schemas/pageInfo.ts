@@ -24,6 +24,14 @@ export default defineType({
       }
     },
     {
+      name: "myImage2",
+      title: "Image2",
+      type: "image",
+      options:{
+        hotspot:true
+      }
+    },
+    {
       name: "backgroundInfo",
       title: "BackgroundInfo",
       type: "string",

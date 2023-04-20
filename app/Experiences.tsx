@@ -9,18 +9,17 @@ type Props = {
 }
 
 function Experiences({exps}:Props) {
-    console.log(exps)
   return (
     <div className='h-screen relative flex flex-col items-center justify-center text-center snap-y snap-mandatory overflow-hidden z-0'>
         <h1 className='uppercase p-10 tracking-[15px] font-extrabold text-gray-400 animate-pulse text-2xl'>experiences</h1>
         {
             exps.map((exp)=>(
-                <div className='flex flex-row gap-4'>
-                    <div key={exp._id} className='flex w-[70px] h-[70px] animate-pulse text-center items-center justify-center rounded-full text-zinc-300'><ForwardIcon /></div>
+                <div className='flex flex-row items-center justify-center gap-4'>
+                    <div key={exp._id} className='flex w-[70px] h-[70px] mr-3 animate-pulse text-center items-center justify-center rounded-full text-zinc-300'><ForwardIcon /></div>
                     <div className='items-center justify-center'>
-                        <h1 className='text-3xl tracking-[4px] uppercase'>{exp.jobTitle}</h1>
-                        <h1 className='text-xl tracking-[4px] uppercase'>{exp.company}</h1>
-                        <p>{exp.points}</p>
+                        <h1 className='text-3xl sm:tracking-[4px] uppercase'>{exp.jobTitle}</h1>
+                        <h1 className='text-xl sm:tracking-[4px] uppercase'>{exp.company}</h1>
+                        <p className=''>{exp.points}</p>
                         <div className='flex flex-row'>
                         {
                             exp.technologies.map((tech)=>(
