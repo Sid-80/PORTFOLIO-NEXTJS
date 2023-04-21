@@ -13,14 +13,10 @@ function Skills({skills}:Props) {
   return (
     <div
      className='h-screen relative flex flex-col items-center justify-center '>
-        <motion.h1
-        initial={{ y:-100 }}
-        whileInView={{y:0}}
-        transition={{
-            duration:1.5
-        }}
+        <h1
         
-         className='uppercase pb-4 tracking-[15px] font-extrabold text-gray-400 animate-pulse text-2xl'>skills</motion.h1>
+        
+         className='uppercase pb-4 sm:m-10 tracking-[15px] font-extrabold text-gray-400 animate-pulse text-2xl'>skills</h1>
         <div className='grid grid-cols-2 gap-2 lg:grid-cols-7 lg:gap-2 sm:grid-cols-4 sm:gap-4 items-center justify-center'>
         {
             skills.map((skill)=>(

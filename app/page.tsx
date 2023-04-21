@@ -42,7 +42,7 @@ export default async function  Home() {
         <Skills skills={skills} />
       </section>
       <section id='contact' className='snap-center'>
-        <Contact />
+        <Contact socialLinks={socialLinks} />
       </section>
     </div>
   )

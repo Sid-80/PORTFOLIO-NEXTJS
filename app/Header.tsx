@@ -41,11 +41,11 @@ function Header({socialLinks}:Props){
         duration:1.3
        }}
        >
-        <a className="rounded-lg text-sm p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#hero">HOME</a>
-        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#about">ABOUT</a>
-        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#project">PROJECTS</a>
-        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#skill">SKILLS</a>
-        <a className="rounded-lg text-sm  p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent" href="#contact">CONTACT</a>
+        <a className="rounded-lg text-sm decoration-sky-500 p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent hover:underline underline-offset-4 decoration-4 transition delay-75 ease-in-out duration-150 " href="#hero">HOME</a>
+        <a className="rounded-lg text-sm decoration-sky-500 p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent hover:underline underline-offset-4 decoration-4 transition delay-75 ease-in-out duration-150 " href="#about">ABOUT</a>
+        <a className="rounded-lg text-sm decoration-sky-500 p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent hover:underline underline-offset-4 decoration-4 transition delay-75 ease-in-out duration-150 " href="#project">PROJECTS</a>
+        <a className="rounded-lg text-sm decoration-sky-500 p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent hover:underline underline-offset-4 decoration-4 transition delay-75 ease-in-out duration-150 " href="#skill">SKILLS</a>
+        <a className="rounded-lg text-sm decoration-sky-500 p-2 lg:px-3 font-semibold text-yellow-500 dark:bg-transparent hover:underline underline-offset-4 decoration-4 transition delay-75 ease-in-out duration-150 " href="#contact">CONTACT</a>
       </motion.div>
       <motion.div
        className="flex space-x-5"

@@ -11,9 +11,7 @@ type Props={
 }
 
 function HomePage({pageInfo}:Props) {
-    console.log(pageInfo);
     const name1 = pageInfo.name;
-    const name2 = pageInfo.role;
     const [text,count] = useTypewriter({
         words:["Loves-To-Play-BasketBall.tsx","<ButLovesToCodeMore />"],
         loop:true,
@@ -35,7 +33,7 @@ function HomePage({pageInfo}:Props) {
                 transition={{
                     duration:1.3
                 }}
-            className='text-yellow-500 font-bold text-3xl p-5'>Hii, I'm <span className='uppercase'>{`${name1}`}</span></motion.h1>
+            className='text-yellow-500 font-bold text-3xl p-5 first-letter:text-7xl first-letter:font-bold '>Hii, I'm <span className='uppercase '>{`${name1}`}</span></motion.h1>
             <motion.h2
                 initial={{
                     z:-80,scale:0.5
