@@ -40,10 +40,9 @@ function About({pageInfo}:Props) {
                 transition={{
                     duration:2
                 }}
-               className='sm:text-2xl text-start first-letter:mr-3 sm:m-5 font-semibold text-base'>{pageInfo.backgroundInfo}</motion.h3>
+               className='sm:text-xl sm:m-5 font-semibold text-justify text-base'>{pageInfo.backgroundInfo}</motion.h3>
           </div>
         </div>
-        <div><ArrowDownCircleIcon className='absolute text-yellow-500 bottom-10 h-10 animate-bounce w-10' /></div>
     </div>
   )
 }

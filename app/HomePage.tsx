@@ -5,7 +5,6 @@ import BackgroundAnimate from './BackgroundAnimate';
 import { urlFor } from '@/sanity';
 import { motion } from 'framer-motion';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
-
 type Props={
     pageInfo:PageInfo;
 }
@@ -20,8 +19,8 @@ function HomePage({pageInfo}:Props) {
   return (
     <div className='h-screen relative bg-zinc-900 flex flex-col items-center justify-center text-center overflow-hidden z-0'>
         <BackgroundAnimate />
-        <img className='absolute hidden sm:block animate-pulse sm:w-screen bg-transparent  brightness-50 opacity-25 sm:h-screen' src={urlFor(pageInfo?.myImage).url()} />
-        <img className='absolute sm:hidden w-screen animate-pulse bg-transparent opacity-25 h-screen ' src={urlFor(pageInfo?.myImage2).url()} />
+        <img alt='homePage' className='absolute hidden sm:block animate-pulse sm:w-screen bg-transparent  brightness-50 opacity-25 sm:h-screen' src={urlFor(pageInfo?.myImage).url()} />
+        <img alt='homePage' className='absolute sm:hidden w-screen animate-pulse bg-transparent opacity-25 h-screen ' src={urlFor(pageInfo?.myImage2).url()} />
         <div className='z-20'>
             <motion.h1
                 initial={{

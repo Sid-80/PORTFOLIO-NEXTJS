@@ -27,6 +27,9 @@ function Contact({socialLinks}:Props) {
           ))
         }
         </div>
+        <div>
+          <h1 className='uppercase px-10 m-10 tracking-[3px] font-extrabold text-center text-gray-400 animate-pulse text-lg'>MADE WITH <span className='text-yellow-500 text-xl font-bold'>{`</>`}</span> BY SIDDHARTH</h1>
+        </div>
     </div>
   )
 }

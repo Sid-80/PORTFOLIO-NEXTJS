@@ -80,7 +80,7 @@ function Header({socialLinks}:Props){
         </div>
         {
           socialLinks.map((link)=>(
-            <SocialIcon bgColor="black" fgColor="white" style={{height:40,width:40}} url={link.url}/>
+            <SocialIcon key={link._id} bgColor="black" fgColor="white" style={{height:40,width:40}} url={link.url}/>
           ))
         }
         
